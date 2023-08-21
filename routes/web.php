@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello/{name?}', function ($name = "everyone"){
-   return "hello, " . $name;
+Route::get('/posts', function (){
+   return "posts";
+});
+
+Route::get('/posts/{id}', function (int $id){
+   return "posts, " . $id;
 });
