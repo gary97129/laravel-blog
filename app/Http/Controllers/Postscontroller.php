@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 class Postscontroller extends Controller
 {
     public function index(){
-        return "posts";
+        return view("posts.index");
     }
 
     public function show(int $id){
-        return "posts, " . $id;
+        return view("posts.show");
     }
 }
 
