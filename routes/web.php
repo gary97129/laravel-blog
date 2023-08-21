@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Homecontroller;
 use App\Http\Controllers\Postscontroller;
 
 /*
@@ -14,9 +15,7 @@ use App\Http\Controllers\Postscontroller;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [Homecontroller::class,'index']);
 
 Route::get('/posts', [Postscontroller::class,'index']);
 
