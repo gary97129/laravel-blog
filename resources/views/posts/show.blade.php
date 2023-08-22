@@ -1,19 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Blog Post - Start Bootstrap Template</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="{{ asset('assets/favicon.ico') }}" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{{ asset('css/posts-styles.css') }}" rel="stylesheet" />
-    </head>
-    <body>
+@extends('layouts.master')
 
-        @include('layouts.shared.navbar')
+@section('title',"詳情")
+
+@section('page-styles')
+
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{ asset('css/posts-styles.css') }}" rel="stylesheet"/>
+
+@endsection
+
+@section('page-content')
 
         <!-- Page content-->
         <div class="container mt-5">
@@ -129,11 +125,11 @@
             </div>
         </div>
 
-        @include('layouts.shared.footer')
+@endsection
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="{{ asset('assets/favicon.ico') }}"></script>
-    </body>
-</html>
+@section('page-scripts')
+
+    <!-- Core theme JS-->
+    <script src="{{ asset('js/scripts.js') }}"></script>
+
+@endsection
