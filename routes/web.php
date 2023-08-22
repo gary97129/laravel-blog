@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Homecontroller;
-use App\Http\Controllers\Postscontroller;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +15,8 @@ use App\Http\Controllers\Postscontroller;
 |
 */
 
-Route::get('/', [Homecontroller::class,'index']);
+Route::get('/', [HomeController::class,'index']);
 
-Route::get('/posts', [Postscontroller::class,'index']);
+Route::get('/posts', [PostsController::class,'index']);
 
-Route::get('/posts/{id}', [Postscontroller::class,'show']);
+Route::get('/posts/{id}', [PostsController::class,'show']);
